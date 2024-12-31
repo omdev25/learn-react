@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import PropTypes from 'prop-types';
 
 function Header(props) {
   return (
@@ -35,5 +35,17 @@ function Header(props) {
     </Navbar>
   );
 }
+
+// Define prop types for validation
+Header.propTypes = {
+  title: PropTypes.string,
+  abouttext: PropTypes.string,
+};
+
+// Set default values for props
+Header.defaultProps = {
+  title: 'Title',
+  abouttext: 'default about label',
+};
 
 export default Header;
